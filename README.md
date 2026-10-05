@@ -1,53 +1,40 @@
-# uDreamms Platform
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Plataforma web para gestión de visas (turista y estudiante), pagos (Stripe + Solana) y operaciones con Firebase.
+## Getting Started
 
-## Estructura del repositorio
-
-| Carpeta | Rol |
-|---------|-----|
-| [`src/app/`](src/app/README.md) | Rutas Next.js (páginas + API) |
-| [`src/backend/`](src/backend/README.md) | Lógica servidor: pagos, Firebase Admin |
-| [`src/frontend/`](src/frontend/README.md) | Módulos UI y `secciones-ocultar` |
-| [`src/components/`](src/components/) | UI compartida (landing, payments, shadcn) |
-| [`functions/`](functions/) | Firebase Cloud Functions |
-| [`deploy/`](deploy/README.md) | **Despliegue:** Vercel, Firebase Studio/BD, env, checklist |
-| [`docs/`](docs/) | Arquitectura y documentación para inversores |
-
-## Documentación clave
-
-- **[Despliegue](deploy/README.md)** — Vercel (web) + Firebase (Firestore, Auth, Functions, Studio)
-- **[Resumen para inversores](docs/INVESTOR_OVERVIEW.md)** — qué es el producto, flujos y stack
-- **[Arquitectura](docs/ARCHITECTURE.md)** — capas, módulos e interacción entre sistemas
-- **[Pagos crypto Firestore](docs/firestore-crypto-payments.md)** — esquema de datos
-
-## Desarrollo local
+First, run the development server:
 
 ```bash
-npm install
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Abre [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Scripts
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-| Comando | Descripción |
-|---------|-------------|
-| `npm run dev` | Servidor de desarrollo |
-| `npm run build` | Build producción (mismo que Vercel) |
-| `npm run deploy:functions` | Cloud Functions → Firebase |
-| `npm run deploy:firebase:rules` | Reglas Firestore + Storage |
-| `npm run deploy:firebase` | Functions + reglas + storage |
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Secciones ocultas
+## Learn More
 
-Las landings guardan bloques no publicados en `secciones-ocultar/` junto a cada ruta (ej. `src/app/visas/tourist/secciones-ocultar/`). Cada carpeta incluye un README con instrucciones para reactivarlas.
+To learn more about Next.js, take a look at the following resources:
 
-## Variables de entorno
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-```bash
-cp deploy/env/.env.web.example .env.local
-```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-Functions (WhatsApp webhooks): ver [deploy/env/.env.functions.example](deploy/env/.env.functions.example).
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+<!-- Triggering deployment after repository migration -->
+
+<!-- Second attempt with cleared Root Directory -->
